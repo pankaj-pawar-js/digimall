@@ -144,11 +144,11 @@ img {
 
 .product-details .product {
   max-width: 100%;
-  width: calc(100% - 20px);
+  width: calc(100% - 30px);
 }
 
 .product-specs{
-  margin: 10px;
+  margin: 15px;
   padding: 10px;
   background-color: white;
   font-size: 12px;
