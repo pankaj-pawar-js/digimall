@@ -1,6 +1,9 @@
 html,body{
   height: 100%;
 }
+*{
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -11,7 +14,9 @@ body {
   
   background-color: aliceblue !important;
 }
-
+button{
+  cursor: pointer;
+}
 #root{
   margin-bottom: 100px;
 }
@@ -65,7 +70,7 @@ img {
   box-shadow: 0 0 0 2px #F90, 0 0 0 3px rgba(255, 153, 0, .5);
   z-index: 1;
   border-radius: 4px 4px 4px 4px;
-  height: 40px;
+  height: 30px;
 }
 
 .search-box input {
@@ -180,7 +185,7 @@ img {
   flex-direction: column;
 }
 
-.checkout h6{
+.checkout h3{
   border-bottom: 1px solid lightgrey;
   width: 50%;
   margin: 10px;
@@ -264,7 +269,7 @@ footer{
   font-size: 18px;
 }
 
-.subtotal h6{
+.subtotal h3{
   width:auto;
 }
 

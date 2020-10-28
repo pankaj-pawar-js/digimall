@@ -38,7 +38,7 @@ const CheckoutPage = () => {
 
     const renderCheckoutProducts = () => (
         <>
-            <h6>Shopping Cart</h6>
+            <h3>Shopping Cart</h3>
             <div className="checkout-list-container">
                 <div className="checkout-product-list-container">
                     {cart.map((p) => (
