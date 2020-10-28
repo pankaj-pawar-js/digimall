@@ -150,7 +150,7 @@ img {
 
 .product .title {
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 
@@ -278,6 +278,17 @@ footer{
   margin: auto;
 }
 
+.search-box label{
+  width: 100%;
+  margin: 0;
+}
+
+.quantity-container label {
+  width: 25px;
+  margin: 0;
+  height: 20px;
+  display: flex;
+}
 @media only screen and (max-width: 480px) {
   .search-box{
     display: none;

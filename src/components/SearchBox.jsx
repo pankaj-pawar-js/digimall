@@ -2,12 +2,14 @@ import React from "react";
 import Icon from "./Icon";
 import search from "../images/search-icon.png";
 
-function SearchBox(props) {
+function SearchBox() {
     return (
-        <div className="search-box">
-            <input />
+        <form className="search-box">
+            <label htmlFor="searchbox">
+                <input id="searchbox" type="text" aria-labelledby="searchbox" />
+            </label>
             <Icon path={search} />
-        </div>
+        </form>
     );
 }
 

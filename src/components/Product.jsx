@@ -85,7 +85,9 @@ function Product({
                     >
                         &#8722;
                     </button>
-                    <input value={quantity} readOnly={true} />
+                    <label>
+                        <input type="text" value={quantity} readOnly={true} />
+                    </label>
                     <button
                         className="plus-button"
                         onClick={() => handleQuantityClick("plus")}

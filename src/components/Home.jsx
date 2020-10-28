@@ -4,7 +4,7 @@ import Product from "./Product";
 import { getProductList } from "../server/api";
 import { AppContext } from "../StateProvider";
 
-import loader from "../images/spinner-icon-gif.jpg";
+import loader from "../images/spinner.gif";
 
 function Home() {
     const [productList, setProductList] = useState([]);
@@ -23,7 +23,7 @@ function Home() {
                 payload: fetchProductList,
             });
             setLoading(false);
-        }, 3000);
+        }, 2000);
     }, [productList, dispatch]);
 
     const renderProducts = () => {
