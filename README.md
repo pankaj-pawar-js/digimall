@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 -   Digimall app is depoled on the heroku : https://digimall2020.herokuapp.com/
 
-![home](./screenshots/home.png)
+![home](./screenshots/home.PNG)
 
 ## Available Scripts
 
@@ -47,7 +47,7 @@ Default port is set to 4000 for prod build, use `PORT` variable to set custom po
 
 # Architecture
 
-![architecture](./screenshots/architecture.png)
+![architecture](./screenshots/architecture.PNG)
 
 ## Responsiveness
 
@@ -56,15 +56,15 @@ Default port is set to 4000 for prod build, use `PORT` variable to set custom po
 
 ### mobile
 
-![mobile](./screenshots/mobile.png)
+![mobile](./screenshots/mobile.PNG)
 
 ### desktop
 
-![desktop](./screenshots/desktop.png)
+![desktop](./screenshots/desktop.PNG)
 
 ### ipad
 
-![ipad](./screenshots/ipad-pro.png)
+![ipad](./screenshots/ipad-pro.PNG)
 
 ## Folder structure
 
@@ -123,7 +123,7 @@ getProductDetailsByPId(id)  --> for getting specific product details
 
 ## LightHouse Audit
 
-![lighthouse](./screenshots/lighthouse.png)
+![lighthouse](./screenshots/lighthouse.PNG)
 
 ## Future Proposals
 
