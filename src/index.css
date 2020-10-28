@@ -65,6 +65,7 @@ img {
   box-shadow: 0 0 0 2px #F90, 0 0 0 3px rgba(255, 153, 0, .5);
   z-index: 1;
   border-radius: 4px 4px 4px 4px;
+  height: 40px;
 }
 
 .search-box input {
@@ -204,8 +205,7 @@ img {
 }
 
 .quantity-container input{
-  width: 25px;
-  height: 20px;
+  width: 100%;
   border: 1px solid;
   font-size: 12px;
   text-align: center;
