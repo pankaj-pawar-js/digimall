@@ -1,10 +1,18 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+-   UI is inspired by Amazon.
+
+## Live Link
+
+-   Digimall app is depoled on the heroku : https://digimall2020.herokuapp.com/
+
+![home](./screenshots/home.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm start:dev`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -17,7 +25,7 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### `npm run build && npm start`
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -25,44 +33,107 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
 
-### `npm run eject`
+Default port is set to 4000 for prod build, use `PORT` variable to set custom port.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# How to use Digimall App
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   Go to `Home` page, it contains list of all products
+-   Add product to the cart by click `Add to basket`. If any product is added, it's count will be show in header `cart` icon.
+-   Click on product title to get detailed infor regarding product
+-   Click on `Cart` icon in the header to navigate to `checkout` page
+-   Click on `DigiMall` icon to navigate to `Home` again.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Architecture
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![architecture](./screenshots/architecture.png)
 
-## Learn More
+## Responsiveness
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-   DigiMall is ready to go on all types of devices whether it is small, medium or large.
+-   responsiveness is maintained using column layout shifting(Flexbox designing)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### mobile
 
-### Code Splitting
+![mobile](./screenshots/mobile.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### desktop
 
-### Analyzing the Bundle Size
+![desktop](./screenshots/desktop.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### ipad
 
-### Making a Progressive Web App
+![ipad](./screenshots/ipad-pro.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Folder structure
 
-### Advanced Configuration
+-   how files arranged inside `src` folder
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### `components`
 
-### Deployment
+-   it contains all the components needed to create the App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### `images`
 
-### `npm run build` fails to minify
+-   it contains all the images used in App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### `server`
+
+-   it includes dummy api call's data
+
+### `utils`
+
+-   it conatins utility files like for formating price in INR, etc.
+
+### entry point
+
+-   entry point is the index.js file
+
+### state management
+
+-   state management is done via react-context.
+-   `StateProvider` component is created, which wraps the whole app. Context is created by the name `AppContext`.
+-   `intialState` of the app is
+
+```code
+const initState = {
+    cart: [],
+    products: []
+}
+```
+
+-   `reducer.js` file in used to update the state by a component
+
+### Simulating server call
+
+-   there is a `api.js` file under `utils` folder, which is used to mocking/fetching server data
+
+-   API's exposed are
+
+```
+getProductList() --> for getting all products list
+
+getProductDetailsByPId(id)  --> for getting specific product details
+```
+
+### screenshots
+
+-   contains all screenshots related to Digimall APP
+
+## LightHouse Audit
+
+![lighthouse](./screenshots/lighthouse.png)
+
+## Future Proposals
+
+-   if the project grows, it is better if we use `redux`. It gives a better visualisation of state with it's dev tools.
+-   unit testing should be done for all components to make sure while introducing new features OR enhancing existing feature, something is not regressed.
+-   Automation support using puppeteer to simulate integration testing with back-end.
+-   Improving Perfomance using react.lazy/suspense OR using useMemo, useCallback, etc further.
+
+## Limitations
+
+-   search box is just for demo purpose. (it is not working)
+-   Product's technical details is same for all products
+-   not doing real time server calls
